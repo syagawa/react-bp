@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import TestContainer from "../src/containers/testContainer";
+import AccountContainer from "./containers/accountContainer";
 import CountContainer from "../src/containers/countContainer";
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <TestContainer />
+      <AccountContainer />
       <CountContainer />
     </div>
   );

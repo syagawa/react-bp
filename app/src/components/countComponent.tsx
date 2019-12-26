@@ -1,10 +1,10 @@
 import * as React from "react";
-import { CountState } from "../reducers/countReducer";
-import { CountActions } from "../containers/countContainer";
+import { CountStateInterface } from "../reducers/countReducer";
+import { CountActionsInterface } from "../containers/countContainer";
 
 interface OwnProps {}
 
-type CountProps = OwnProps & CountState & CountActions;
+type CountProps = OwnProps & CountStateInterface & CountActionsInterface;
 
 export const CountComponent: React.SFC<CountProps> = (props: CountProps) => {
   return (

@@ -2,11 +2,11 @@ import { reducerWithInitialState } from "typescript-fsa-reducers";
 import { countActions } from "../actions/countActions";
 import { AnyAction } from "typescript-fsa";
 
-export interface CountState {
+export interface CountStateInterface {
   counter: number;
 }
 
-const initialState: CountState = {
+const initialState: CountStateInterface = {
   counter: 0
 };
 
@@ -25,4 +25,4 @@ export const countReducer = reducerWithInitialState(initialState)
       return Object.assign({}, state, { counter });
     }
   )
-  .default((state, action)=> Object.assign({}, state, { counter: 0}) );
+  .default((state)=> Object.assign({}, state, { counter: 0}) );

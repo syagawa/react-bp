@@ -1,12 +1,12 @@
 import * as React from "react";
-import { TestState } from "../reducers/testReducer";
-import { TestActions } from "../containers/testContainer";
+import { AccountStateInterface } from "../reducers/accountReducer";
+import { AccountActionsInterface } from "../containers/accountContainer";
 
 interface OwnProps {}
 
-type TestProps = OwnProps & TestState & TestActions;
+type AccountProps = OwnProps & AccountStateInterface & AccountActionsInterface;
 
-export const TestComponent: React.SFC<TestProps> = (props: TestProps) => {
+export const AccountComponent: React.SFC<AccountProps> = (props: AccountProps) => {
   return (
     <div>
       <div className="field">

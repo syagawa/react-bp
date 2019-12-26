@@ -1,15 +1,15 @@
 import { createStore, combineReducers } from "redux";
-import { testReducer, TestState } from "../reducers/testReducer";
-import { countReducer, CountState } from "../reducers/countReducer";
+import { accountReducer, AccountStateInterface } from "../reducers/accountReducer";
+import { countReducer, CountStateInterface } from "../reducers/countReducer";
 
-export type AppState = {
-  test: TestState,
-  count: CountState
+export type AppStateType = {
+  test: AccountStateInterface,
+  count: CountStateInterface
 };
 
 const store = createStore(
-  combineReducers<AppState>({
-    test: testReducer,
+  combineReducers<AppStateType>({
+    test: accountReducer,
     count: countReducer
   })
 );

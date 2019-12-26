@@ -1,25 +1,25 @@
 import { reducerWithInitialState } from "typescript-fsa-reducers";
-import { testActions } from "../actions/testActions";
+import { accountActions } from "../actions/accountActions";
 
-export interface TestState {
+export interface AccountStateInterface {
   name: string;
   email: string;
 }
 
-const initialState: TestState = {
+const initialState: AccountStateInterface = {
   name: "",
   email: ""
 };
 
-export const testReducer = reducerWithInitialState(initialState)
+export const accountReducer = reducerWithInitialState(initialState)
   .case(
-    testActions.updateName,
+    accountActions.updateName,
     (state, name) => {
       return Object.assign({}, state, { name });
     }
   )
   .case(
-    testActions.updateEmail,
+    accountActions.updateEmail,
     (state, email) => {
       return Object.assign({}, state, { email });
     }
