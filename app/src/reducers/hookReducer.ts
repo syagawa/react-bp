@@ -1,25 +1,25 @@
 import { reducerWithInitialState } from "typescript-fsa-reducers";
-import { asyncActions } from "../actions/asyncActions";
+import { hookActions } from "../actions/hookActions";
 
 
-export interface AsyncStateInterface {
+export interface HookStateInterface {
   counter: number;
 }
 
-const initialState: AsyncStateInterface = {
+const initialState: HookStateInterface = {
   counter: 0
 };
 
-export const asyncReducer = reducerWithInitialState(initialState)
+export const hookReducer = reducerWithInitialState(initialState)
   .case(
-    asyncActions.increment,
+    hookActions.increment,
     (state, counter) => {
       counter++;
       return Object.assign({}, state, { counter });
     }
   )
   .case(
-    asyncActions.decrement,
+    hookActions.decrement,
     (state, counter) => {
       counter--;
       return Object.assign({}, state, { counter });
