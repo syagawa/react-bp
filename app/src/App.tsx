@@ -17,9 +17,9 @@ const theme = createMuiTheme({
   palette: {
     primary: red
   },
-  typography: {
-    useNextVariants: true
-  }
+  // typography: {
+  //   useNextVariants: true
+  // }
 });
 
 const App: FC = () => {
