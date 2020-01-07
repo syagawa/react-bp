@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC } from "react";
+import {
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
+import {
+  MuiThemeProvider,
+  createMuiTheme
+} from "@material-ui/core/styles";
+import red from "@material-ui/core/colors/red";
 
-const App: React.FC = () => {
+import Todos from "./views/containers/Todos";
+import "./App.css";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: red
+  },
+  typography: {
+    useNextVariants: true
+  }
+});
+
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MuiThemeProvider theme={theme}>
+      <Switch>
+        <Route exact path="/" component={Todos} />
+        <Redirect to="/" />
+      </Switch>
+    </MuiThemeProvider>
   );
 }
 
