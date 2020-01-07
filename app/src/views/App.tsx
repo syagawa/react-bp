@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core/styles";
 import red from "@material-ui/core/colors/red";
 
-import Todos from "./views/containers/Todos";
+import Todos from "./containers/Todos";
 import "./App.css";
 
 const theme = createMuiTheme({
@@ -33,4 +33,4 @@ const App: FC = () => {
   );
 }
 
-export default App;
+export default App
