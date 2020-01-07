@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 
 const styles = {
   root: {
-    flexGlow: 1
+    flexGrow: 1
   }
 };
 
@@ -17,9 +17,9 @@ const SimpleAppBar: FC<Props> = ({ classes: { root } }) => {
     <div className={root}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" color="inherit">
+          {/* <Typography variant="h6" color="inherit"> */}
             Todos
-          </Typography>
+          {/* </Typography> */}
         </Toolbar>
       </AppBar>
     </div>

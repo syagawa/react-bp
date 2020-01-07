@@ -24,7 +24,7 @@ const TodoClearButton = ({ classes, onClick }: Props): JSX.Element => {
     <Button
       variant="contained"
       color="default"
-      className="{classes.button}"
+      className={classes.button}
       onClick={onClick}
     >
       全て削除
