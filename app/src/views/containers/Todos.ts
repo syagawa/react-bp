@@ -13,7 +13,8 @@ const mapStateToProps = (state: AppState) => ({
 })
 
 const mapDispatchToProps = {
-  handleSubmit: operations.add,
+  handleSubmit: operations.addSync,
+  handleSubmitAsync: operations.addAsync,
   toggleCompletedCheck: operations.toggleCompleted,
   handleClickRemoveButton: operations.remove,
   handleClickClearButton: operations.clear,

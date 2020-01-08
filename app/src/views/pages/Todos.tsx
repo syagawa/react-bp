@@ -5,6 +5,7 @@ import { withStyles, WithStyles, StyleRules } from "@material-ui/core/styles"
 import { Todo } from "todo"
 import SimpleAppBar from "../components/SimpleAppBar"
 import TodoForm from "../components/TodoForm"
+import TodoFormAsync from "../components/TodoFormAsync"
 import TodoFilter from "../components/TodoFilter"
 import TodoClearButton from "../components/TodoClearButton"
 import TodoList from "../components/TodoList"
@@ -21,6 +22,7 @@ type Props = WithStyles<typeof styles> & {
     filter: boolean
   }
   handleSubmit: (text: string) => void
+  handleSubmitAsync: (text: string) => void
   toggleCompletedCheck: (id: string) => void
   handleClickRemoveButton: (id: string) => void
   handleClickClearButton: () => void
@@ -31,6 +33,7 @@ type Props = WithStyles<typeof styles> & {
 const Todos: FC<Props> = ({
   classes,
   handleSubmit,
+  handleSubmitAsync,
   toggleCompletedCheck,
   handleClickRemoveButton,
   handleClickClearButton,
@@ -41,6 +44,7 @@ const Todos: FC<Props> = ({
     <div className={classes.container}>
       <SimpleAppBar />
       <TodoForm handleSubmit={handleSubmit} />
+      <TodoFormAsync handleSubmitAsync={handleSubmitAsync} />
       <TodoFilter
         label="未完了時に表示"
         checked={filter}
