@@ -10,7 +10,7 @@ import Button from "@material-ui/core/Button";
 
 const styles = ( theme: Theme ): StyleRules => ({
   button: {
-    margin: theme.spacing.unit,
+    // margin: theme.spacing.unit,
     width: "100px"
   }
 });

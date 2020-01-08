@@ -12,12 +12,12 @@ import Button from "@material-ui/core/Button";
 const styles = (theme: Theme): StyleRules => ({
   button: {
     verticalAlign: "bottom",
-    margin: theme.spacing.unit,
+    // margin: theme.spacing.unit,
     width: "100px"
   },
   textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
+    // marginLeft: theme.spacing.unit,
+    // marginRight: theme.spacing.unit,
     width: 300
   }
 });

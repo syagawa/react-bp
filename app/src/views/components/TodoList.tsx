@@ -47,8 +47,8 @@ const TodoItem: FC<TodoProps> = ({
 
 const styles = (theme: Theme): StyleRules => ({
   list: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
+    // marginLeft: theme.spacing.unit,
+    // marginRight: theme.spacing.unit,
     maxWidth: "600px",
     width: "100%",
     display: "inline-block"

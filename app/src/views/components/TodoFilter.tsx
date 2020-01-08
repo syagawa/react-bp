@@ -10,8 +10,8 @@ import Checkbox from "@material-ui/core/Checkbox";
 
 const styles = (theme: Theme): StyleRules => ({
   checkbox: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit
+    // marginLeft: theme.spacing.unit,
+    // marginRight: theme.spacing.unit
   }
 });
 
