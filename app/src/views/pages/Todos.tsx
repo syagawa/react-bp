@@ -1,23 +1,19 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
-import {
-  withStyles,
-  WithStyles,
-  StyleRules
-} from "@material-ui/core/styles";
+import { withStyles, WithStyles, StyleRules } from "@material-ui/core/styles"
 
-import { Todo } from "todo";
-import SimpleAppBar from "../components/SimpleAppBar";
-import TodoForm from "../components/TodoForm";
-import TodoFilter from "../components/TodoFilter";
-import TodoClearButton from "../components/TodoClearButton";
-import TodoList from "../components/TodoList";
+import { Todo } from "todo"
+import SimpleAppBar from "../components/SimpleAppBar"
+import TodoForm from "../components/TodoForm"
+import TodoFilter from "../components/TodoFilter"
+import TodoClearButton from "../components/TodoClearButton"
+import TodoList from "../components/TodoList"
 
 const styles = (): StyleRules => ({
   container: {
     textAlign: "center"
   }
-});
+})
 
 type Props = WithStyles<typeof styles> & {
   todos: {
@@ -57,7 +53,7 @@ const Todos: FC<Props> = ({
         handleClickRemoveButton={handleClickRemoveButton}
       />
     </div>
-  );
+  )
 }
 
-export default withStyles(styles)(Todos);
+export default withStyles(styles)(Todos)

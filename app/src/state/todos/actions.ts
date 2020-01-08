@@ -1,4 +1,4 @@
-import { ActionType } from "redux-actions-type";
+import { ActionType } from "redux-actions-type"
 
 export const ActionTypes = {
   ADD: "todos/ADD",
@@ -6,20 +6,20 @@ export const ActionTypes = {
   REMOVE: "todos/REMOVE",
   CLEAR: "todos/CLEAR",
   TOGGLE_FILTER: "todos/TOGGLE_FILTER"
-} as const;
+} as const
 
 const actions = {
   add(text: string){
     return { 
       type: ActionTypes.ADD,
       payload: { text }
-    };
+    }
   },
   toggleCompleted(id: string){
     return {
       type: ActionTypes.TOGGLE_COMPLETED,
       payload: { id }
-    };
+    }
   },
   remove(id: string){
     return {
@@ -37,7 +37,7 @@ const actions = {
       type: ActionTypes.TOGGLE_FILTER
     }
   }
-};
+}
 
-export type Actions = ActionType<typeof actions>;
-export default actions;
+export type Actions = ActionType<typeof actions>
+export default actions

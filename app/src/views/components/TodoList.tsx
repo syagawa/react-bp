@@ -1,18 +1,18 @@
-import React, { FC } from "react";
+import React, { FC } from "react"
 
 import {
   withStyles,
   WithStyles,
   Theme,
   StyleRules
-} from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
-import ListItemText from "@material-ui/core/ListItemText";
-import Checkbox from "@material-ui/core/Checkbox";
-import IconButton from "@material-ui/core/IconButton";
-import DeleteIcon from '@material-ui/icons/Delete';
+} from "@material-ui/core/styles"
+import List from "@material-ui/core/List"
+import ListItem from "@material-ui/core/ListItem"
+import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction"
+import ListItemText from "@material-ui/core/ListItemText"
+import Checkbox from "@material-ui/core/Checkbox"
+import IconButton from "@material-ui/core/IconButton"
+import DeleteIcon from '@material-ui/icons/Delete'
 
 import { Todo } from "todo"
 
@@ -38,12 +38,15 @@ const TodoItem: FC<TodoProps> = ({
     <ListItemSecondaryAction>
       <IconButton
         aria-label="Delete"
-        onClick={ () => { handleClickRemoveButton(id); } }>
-          <DeleteIcon />
+        onClick={() => {
+          handleClickRemoveButton(id)
+        }}
+      >
+        <DeleteIcon />
       </IconButton>
     </ListItemSecondaryAction>
   </ListItem>
-);
+)
 
 const styles = (theme: Theme): StyleRules => ({
   list: {
@@ -53,7 +56,7 @@ const styles = (theme: Theme): StyleRules => ({
     width: "100%",
     display: "inline-block"
   }
-});
+})
 
 type TodoListProps = WithStyles<typeof styles> & {
   todos: Todo[]
@@ -79,7 +82,6 @@ const TodoList: FC<TodoListProps> = ({
       ))}
     </List>
   </div>
-);
+)
 
-export default withStyles(styles)(TodoList);
-
+export default withStyles(styles)(TodoList)

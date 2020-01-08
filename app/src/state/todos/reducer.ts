@@ -1,7 +1,7 @@
-import { Reducer } from "redux";
-import { Todo } from "todo";
-import { Actions, ActionTypes } from "./actions";
-import cuid from "cuid";
+import { Reducer } from "redux"
+import { Todo } from "todo"
+import { Actions, ActionTypes } from "./actions"
+import cuid from "cuid"
 
 type State = {
   todos: Todo[]
@@ -11,10 +11,10 @@ type State = {
 const initialState: State = {
   todos: [],
   filter: false
-};
+}
 
 const reducer: Reducer<State, Actions> = (state = initialState, action ) => {
-  switch( action.type ) {
+  switch (action.type) {
     case ActionTypes.ADD: {
       return {
         ...state,
@@ -25,13 +25,13 @@ const reducer: Reducer<State, Actions> = (state = initialState, action ) => {
             completed: false
           }
         ])
-      };
+      }
     }
     case ActionTypes.TOGGLE_COMPLETED: {
       return {
         ...state,
         todos: state.todos.map(todo => {
-          if(todo.id !== action.payload.id){
+          if (todo.id !== action.payload.id) {
             return todo
           }
           return {
@@ -40,19 +40,19 @@ const reducer: Reducer<State, Actions> = (state = initialState, action ) => {
             completed: !todo.completed
           }
         })
-      };
+      }
     }
     case ActionTypes.REMOVE: {
       return {
         ...state,
         todos: state.todos.filter(todo => todo.id !== action.payload.id)
-      };
+      }
     }
     case ActionTypes.CLEAR: {
       return {
         ...state,
         todos: []
-      };
+      }
     }
     case ActionTypes.TOGGLE_FILTER: {
       return {
@@ -61,10 +61,10 @@ const reducer: Reducer<State, Actions> = (state = initialState, action ) => {
       }
     }
     default: {
-      return state;
+      return state
     }
 
   }
-};
+}
 
-export default reducer;
+export default reducer

@@ -1,10 +1,10 @@
-import React, { FC } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import red from "@material-ui/core/colors/red";
+import React, { FC } from "react"
+import { Route, Switch, Redirect } from "react-router-dom"
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles"
+import red from "@material-ui/core/colors/red"
 
-import Todos from "./containers/Todos";
-import "./App.css";
+import Todos from "./containers/Todos"
+import "./App.css"
 
 const theme = createMuiTheme({
   palette: {
@@ -13,7 +13,7 @@ const theme = createMuiTheme({
   typography: {
     // useNextVariants: true
   }
-});
+})
 
 const App: FC = () => {
   return (
@@ -23,7 +23,7 @@ const App: FC = () => {
         <Redirect to="/" />
       </Switch>
     </MuiThemeProvider>
-  );
+  )
 }
 
 export default App

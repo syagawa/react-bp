@@ -1,4 +1,4 @@
-import actions from "./actions";
+import actions from "./actions"
 
 export default {
   add: actions.add,
@@ -6,5 +6,4 @@ export default {
   remove: actions.remove,
   clear: actions.clear,
   toggleFilter: actions.toggleFilter
-};
-
+}
