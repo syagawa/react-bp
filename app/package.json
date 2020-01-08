@@ -22,6 +22,7 @@
     "react-router-redux": "^4.0.8",
     "react-scripts": "3.3.0",
     "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
     "redux-actions-type": "^1.0.0",
     "typescript": "^3.7.4"
   },
