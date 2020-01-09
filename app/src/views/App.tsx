@@ -4,6 +4,7 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles"
 import red from "@material-ui/core/colors/red"
 
 import Todos from "./containers/Todos"
+import Sample from "./containers/Sample"
 import "./App.css"
 
 const theme = createMuiTheme({
@@ -20,6 +21,7 @@ const App: FC = () => {
     <MuiThemeProvider theme={theme}>
       <Switch>
         <Route exact path="/" component={Todos} />
+        <Route exact path="/sample" component={Sample} />
         <Redirect to="/" />
       </Switch>
     </MuiThemeProvider>
